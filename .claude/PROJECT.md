@@ -24,6 +24,13 @@ Astro (static build), plain CSS, minimal vanilla JS islands. Deployed via
 GitHub Actions (`withastro/action`) to GitHub Pages on push to `main`.
 Content lives in `src/data/*.ts`.
 
+## Security
+This repo is **public**. Before every commit, run `/security-review` (or
+otherwise check the diff) to confirm no API keys, tokens, credentials, or
+sensitive personal data (private financials, exact ownership/cap table,
+family/relationship details, medical info, etc. — see the content brief's
+privacy rules) are being committed.
+
 ## Status
 One-page site built: hero, story timeline, Tuvis deep dive, filterable
 projects directory, sport/race log, music & community, media/interviews,
