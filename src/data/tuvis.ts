@@ -27,13 +27,13 @@ export const tuvisChapters: TuvisChapter[] = [
 	},
 	{
 		n: 5,
-		title: 'Deborah and Latin America',
-		text: 'Deborah Palacios joined as co-founder, bringing deep LATAM experience. They built the company 10,500 km apart for two years before meeting in person.',
+		title: 'A one-man show',
+		text: 'Yanir built and ran the company solo in the early years — product, development, sales, and support all at once.',
 	},
 	{
 		n: 6,
-		title: 'Growing through COVID',
-		text: 'As business moved online, WhatsApp\'s role in Latin American commerce made the product more relevant, not less.',
+		title: '$1M ARR, two people',
+		text: 'As business moved online during COVID and WhatsApp\'s role in Latin American commerce grew, the company reached $1M ARR with a team of just two.',
 	},
 	{
 		n: 7,

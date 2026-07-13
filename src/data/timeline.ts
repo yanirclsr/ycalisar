@@ -85,10 +85,10 @@ export const timeline: TimelineItem[] = [
 	},
 	{
 		year: '2019–2021',
-		title: 'Deborah Palacios, and a bet on Latin America',
-		hook: '10,500 km apart, co-founders for two years before meeting in person.',
+		title: 'A one-man show, to $1M ARR',
+		hook: 'Product, sales, support, marketing, code — all Yanir, with a two-person team getting the company to $1M ARR.',
 		detail:
-			'Yanir met Deborah Palacios online while she was looking for a technology partner for Latin American expansion. They became co-founders, building the company for years before finally meeting in person — with Deborah\'s LATAM experience becoming central to the company\'s growth in Brazil and beyond.',
+			'Yanir built and ran Whatslly essentially solo in the early years — product, development, sales, and customer success all at once. By the time the team had grown to just two people, the company had reached $1M in annual recurring revenue, largely built on early traction in Latin America.',
 	},
 	{
 		year: '2021',
