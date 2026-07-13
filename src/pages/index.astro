@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import Timeline from '../components/Timeline.astro';
+import Tuvis from '../components/Tuvis.astro';
+import Projects from '../components/Projects.astro';
+import Sport from '../components/Sport.astro';
+import MusicCommunity from '../components/MusicCommunity.astro';
+import Media from '../components/Media.astro';
+import Travel from '../components/Travel.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Yanir Calisar — Founder, Builder, Athlete';
+const description =
+	"Founder of Tuvis. Nearly two decades between business, product, marketing, sales, and code — plus marathons, diving, music, and community.";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://ycalisar.com" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="preconnect" href="https://i.ytimg.com" />
+	</head>
+	<body>
+		<Hero />
+		<Timeline />
+		<Tuvis />
+		<Projects />
+		<Sport />
+		<MusicCommunity />
+		<Media />
+		<Travel />
+		<Footer />
+	</body>
+</html>
+
+<script>
+	const observer = new IntersectionObserver(
+		(entries) => {
+			for (const entry of entries) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+					observer.unobserve(entry.target);
+				}
+			}
+		},
+		{ threshold: 0.1 }
+	);
+	document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>

@@ -1,0 +1,269 @@
+:root {
+	--bg: #0a0a0d;
+	--bg-elevated: #131318;
+	--bg-card: #17171e;
+	--border: #26262f;
+	--text: #f2f2f5;
+	--text-dim: #a3a3ae;
+	--text-faint: #6b6b78;
+	--accent: #ff5c38;
+	--accent-dim: #ff5c3822;
+	--accent-2: #4ee1c1;
+	--max-w: 1080px;
+	--radius: 14px;
+	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: inherit;
+}
+
+h1, h2, h3, h4, p, ul {
+	margin: 0;
+}
+
+.wrap {
+	max-width: var(--max-w);
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+section {
+	padding: 72px 0;
+	border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type {
+	border-bottom: none;
+}
+
+.eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 12px;
+}
+
+.section-title {
+	font-size: clamp(1.6rem, 4vw, 2.4rem);
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	margin-bottom: 12px;
+}
+
+.section-sub {
+	color: var(--text-dim);
+	font-size: 1.05rem;
+	max-width: 640px;
+	margin-bottom: 40px;
+}
+
+/* Reveal-on-scroll */
+.reveal {
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Cards */
+.card {
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 20px;
+}
+
+/* Details/summary as lean expand-on-click */
+details.card summary {
+	cursor: pointer;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 12px;
+	font-weight: 600;
+}
+
+details.card summary::-webkit-details-marker {
+	display: none;
+}
+
+details.card summary::after {
+	content: '+';
+	color: var(--accent);
+	font-size: 1.2rem;
+	flex-shrink: 0;
+	transition: transform 0.2s ease;
+}
+
+details.card[open] summary::after {
+	transform: rotate(45deg);
+}
+
+details.card .detail-body {
+	margin-top: 14px;
+	color: var(--text-dim);
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.detail-body a {
+	color: var(--accent-2);
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition: text-decoration-color 0.15s ease;
+}
+
+.detail-body a:hover {
+	text-decoration-color: currentColor;
+}
+
+.hook {
+	color: var(--text-dim);
+	font-size: 0.92rem;
+	margin-top: 4px;
+}
+
+/* Pill / badge */
+.pill {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	background: var(--bg-elevated);
+	border: 1px solid var(--border);
+	color: var(--text-dim);
+}
+
+.pill.accent {
+	background: var(--accent-dim);
+	border-color: transparent;
+	color: var(--accent);
+}
+
+/* Buttons / links */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 18px;
+	border-radius: 999px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	border: 1px solid var(--border);
+	background: var(--bg-elevated);
+	transition: border-color 0.15s ease, transform 0.15s ease;
+	text-decoration: none;
+}
+
+.btn:hover {
+	border-color: var(--accent);
+	transform: translateY(-1px);
+}
+
+.btn.primary {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: #0a0a0d;
+}
+
+.link-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+/* Grid helpers */
+.grid {
+	display: grid;
+	gap: 16px;
+}
+
+@media (min-width: 640px) {
+	.grid.cols-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 900px) {
+	.grid.cols-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* Filter buttons */
+.filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 28px;
+}
+
+.filter-btn {
+	padding: 8px 16px;
+	border-radius: 999px;
+	border: 1px solid var(--border);
+	background: transparent;
+	color: var(--text-dim);
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.filter-btn.active {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: #0a0a0d;
+}
+
+/* Placeholder markers stay subtle */
+.ph {
+	color: var(--text-faint);
+	font-style: italic;
+	font-size: 0.85em;
+}
+
+.muted {
+	color: var(--text-dim);
+}
+
+@media (max-width: 640px) {
+	section {
+		padding: 52px 0;
+	}
+}

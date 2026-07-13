@@ -1,0 +1,55 @@
+---
+import { links } from '../data/links';
+
+const youtubeId = 'z-7wHEJY8P8';
+---
+
+<section id="media" style="background: var(--bg-elevated);">
+	<div class="wrap">
+		<p class="eyebrow reveal">Interviews & writing</p>
+		<h2 class="section-title reveal">In my own words.</h2>
+
+		<div class="grid cols-2">
+			<div class="card reveal">
+				<div
+					class="yt-embed"
+					data-yt-id={youtubeId}
+					style={`position: relative; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; cursor: pointer; background: #000 url('https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg') center/cover;`}
+				>
+					<span
+						style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;"
+					>
+						<span style="width: 56px; height: 56px; border-radius: 999px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #0a0a0d;">▶</span>
+					</span>
+				</div>
+				<p style="margin-top: 14px; font-weight: 600;">20 Minute Leaders — the Tuvis journey</p>
+				<p class="hook">A conversation on building Whatslly/Tuvis from idea to enterprise scale.</p>
+			</div>
+
+			<div class="card reveal">
+				<a href={links.nomadPodcast} target="_blank" rel="noopener" style="text-decoration: none; display: block;">
+					<div style="aspect-ratio: 16/9; border-radius: 10px; background: linear-gradient(135deg, var(--accent-dim), var(--bg-card)); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
+						<span style="font-size: 2rem;">🎙️</span>
+					</div>
+					<p style="margin-top: 14px; font-weight: 600;">Nomad Podcast — Ep. 41</p>
+					<p class="hook">Recorded in Koh Tao, Thailand — on running 15 SaaS products, lean validation, and diving.</p>
+				</a>
+			</div>
+		</div>
+
+		<div class="link-row reveal" style="margin-top: 24px;">
+			<a class="btn" href={links.slideshare} target="_blank" rel="noopener">SlideShare — talks & workshops</a>
+			<a class="btn" href={links.f6s} target="_blank" rel="noopener">F6S profile</a>
+			<a class="btn" href={links.github} target="_blank" rel="noopener">GitHub — open source</a>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.querySelectorAll<HTMLElement>('.yt-embed').forEach((el) => {
+		el.addEventListener('click', () => {
+			const id = el.dataset.ytId;
+			el.outerHTML = `<div style="aspect-ratio:16/9;border-radius:10px;overflow:hidden;"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${id}?autoplay=1" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+		});
+	});
+</script>

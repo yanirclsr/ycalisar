@@ -1,0 +1,28 @@
+---
+import { links } from '../data/links';
+
+const roles = ['Founder', 'Builder', 'Lecturer', 'Musician', 'Marathoner', 'Divemaster'];
+---
+
+<section id="top" style="border-bottom: 1px solid var(--border); padding-top: 96px;">
+	<div class="wrap reveal">
+		<p class="eyebrow">Yanir Calisar</p>
+		<h1 style="font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.03em; max-width: 780px;">
+			I build companies, products, and communities.
+		</h1>
+		<p style="font-size: 1.15rem; color: var(--text-dim); max-width: 620px; margin-top: 20px;">
+			Founded <a href={links.tuvis} target="_blank" rel="noopener" style="color: var(--accent-2); text-decoration: underline;">Tuvis</a>.
+			Nearly two decades between business, product, marketing, sales, and code. Outside of work: marathons,
+			triathlons, diving, music, and building things for communities I belong to.
+		</p>
+		<div class="link-row" style="margin-top: 24px;">
+			{roles.map((r) => <span class="pill">{r}</span>)}
+		</div>
+		<div class="link-row" style="margin-top: 28px;">
+			<a class="btn primary" href="#story">My story ↓</a>
+			<a class="btn" href={links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+			<a class="btn" href={links.appleDeveloper} target="_blank" rel="noopener">My apps</a>
+			<a class="btn" href="#contact">Contact</a>
+		</div>
+	</div>
+</section>

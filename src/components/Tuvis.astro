@@ -1,0 +1,29 @@
+---
+import { tuvisChapters } from '../data/tuvis';
+import { links } from '../data/links';
+---
+
+<section id="tuvis" style="background: var(--bg-elevated);">
+	<div class="wrap">
+		<p class="eyebrow reveal">The main chapter</p>
+		<h2 class="section-title reveal">Tuvis: from a Friday-night idea to enterprise SaaS.</h2>
+		<p class="section-sub reveal">
+			$11M raised. Enterprise customers across Latin America. Five years as CEO, then a deliberate step back.
+			Here's the arc, chapter by chapter.
+		</p>
+		<div class="grid cols-3">
+			{tuvisChapters.map((c) => (
+				<div class="card reveal">
+					<span class="pill accent">{String(c.n).padStart(2, '0')}</span>
+					<h3 style="font-size: 1.1rem; margin-top: 12px; margin-bottom: 6px;">{c.title}</h3>
+					<p class="hook">{c.text}</p>
+				</div>
+			))}
+		</div>
+		<div class="link-row reveal" style="margin-top: 32px;">
+			<a class="btn primary" href={links.tuvis} target="_blank" rel="noopener">Visit Tuvis →</a>
+			<a class="btn" href={links.tuvisJourneyPost} target="_blank" rel="noopener">Read the founder story</a>
+			<a class="btn" href={links.tuvisSpanishArticle} target="_blank" rel="noopener">Article (Spanish)</a>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,28 @@
+---
+import { timeline } from '../data/timeline';
+---
+
+<section id="story">
+	<div class="wrap">
+		<p class="eyebrow reveal">My story</p>
+		<h2 class="section-title reveal">Mexico City to Tel Aviv, with a lot of detours.</h2>
+		<p class="section-sub reveal">
+			Not a straight line. Sales, hospitality, marketing, product, code, and back again — usually because a
+			real problem needed solving. Tap any chapter for the fuller story.
+		</p>
+		<div style="display: flex; flex-direction: column; gap: 12px;">
+			{timeline.map((item) => (
+				<details class="card reveal">
+					<summary>
+						<span>
+							<span class="pill accent" style="margin-right: 10px;">{item.year}</span>
+							{item.title}
+						</span>
+					</summary>
+					<p class="hook" style="margin-top: 10px;">{item.hook}</p>
+					<div class="detail-body">{item.detail}</div>
+				</details>
+			))}
+		</div>
+	</div>
+</section>

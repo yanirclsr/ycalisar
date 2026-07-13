@@ -1,0 +1,21 @@
+---
+import { links } from '../data/links';
+---
+
+<section id="contact" style="background: var(--bg-elevated); border-bottom: none;">
+	<div class="wrap reveal">
+		<p class="eyebrow">Get in touch</p>
+		<h2 class="section-title">Speaking, advising, or just say hi.</h2>
+		<p class="section-sub">
+			Open to lectures on entrepreneurship, product validation, founder-led sales, LATAM expansion, and the
+			real story behind Tuvis. Also happy to talk running, diving, or music.
+		</p>
+		<div class="link-row">
+			<a class="btn primary" href={links.linkedin} target="_blank" rel="noopener">LinkedIn →</a>
+			<a class="btn" href={links.github} target="_blank" rel="noopener">GitHub</a>
+			<a class="btn" href={links.appleDeveloper} target="_blank" rel="noopener">App Store</a>
+			<a class="btn" href={links.f6s} target="_blank" rel="noopener">F6S</a>
+		</div>
+		<p class="hook" style="margin-top: 40px;">© {new Date().getFullYear()} Yanir Calisar</p>
+	</div>
+</section>

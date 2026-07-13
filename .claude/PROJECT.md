@@ -19,6 +19,16 @@ GitHub Pages with this domain — needs a `CNAME` file in the repo and DNS
 records (A/ALIAS to GitHub Pages IPs or CNAME to `<user>.github.io`) set up
 in GoDaddy when the site is ready to deploy.
 
+## Tech
+Astro (static build), plain CSS, minimal vanilla JS islands. Deployed via
+GitHub Actions (`withastro/action`) to GitHub Pages on push to `main`.
+Content lives in `src/data/*.ts`.
+
 ## Status
-Repo initialized, no site code yet. Tech stack and content (project list,
-bio, social links) to be decided/provided in a follow-up session.
+One-page site built: hero, story timeline, Tuvis deep dive, filterable
+projects directory, sport/race log, music & community, media/interviews,
+travel & diving, contact. Several fields use `[VERIFY ...]` / `[ADD ...]`
+placeholders pending confirmation from Yanir before publishing exact
+numbers, dates, and private figures (ARR, ownership, bank counts, family
+names). GitHub Pages source must be set to "GitHub Actions" in repo
+settings, and GoDaddy DNS still needs to point at GitHub Pages.

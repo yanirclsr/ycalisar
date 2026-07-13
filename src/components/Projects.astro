@@ -1,0 +1,61 @@
+---
+import { projects, projectCategories } from '../data/projects';
+---
+
+<section id="projects">
+	<div class="wrap">
+		<p class="eyebrow reveal">What I've built</p>
+		<h2 class="section-title reveal">Companies, apps, communities, and experiments.</h2>
+		<p class="section-sub reveal">
+			Not everything became a company. Some things stayed small on purpose. Filter by type, tap a card for
+			the story.
+		</p>
+		<div class="filter-bar reveal" id="project-filters">
+			<button class="filter-btn active" data-filter="All">All</button>
+			{projectCategories.map((cat) => (
+				<button class="filter-btn" data-filter={cat}>{cat}</button>
+			))}
+		</div>
+		<div class="grid cols-3" id="project-grid">
+			{projects.map((p) => (
+				<details class="card reveal" data-category={p.category}>
+					<summary>
+						<span>
+							{p.name}
+							<div style="margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap;">
+								<span class="pill">{p.category}</span>
+								<span class="pill accent">{p.status}</span>
+							</div>
+						</span>
+					</summary>
+					<p class="hook" style="margin-top: 12px;">{p.oneLiner}</p>
+					<div class="detail-body">
+						<p><strong style="color: var(--text);">{p.years}</strong> · {p.role}</p>
+						<p style="margin-top: 8px;">{p.detail}</p>
+						{p.link && (
+							<p style="margin-top: 10px;">
+								<a href={p.link} target="_blank" rel="noopener">Learn more →</a>
+							</p>
+						)}
+					</div>
+				</details>
+			))}
+		</div>
+	</div>
+</section>
+
+<script>
+	const filterBar = document.getElementById('project-filters');
+	const grid = document.getElementById('project-grid');
+	filterBar?.addEventListener('click', (e) => {
+		const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.filter-btn');
+		if (!btn) return;
+		filterBar.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+		btn.classList.add('active');
+		const filter = btn.dataset.filter;
+		grid?.querySelectorAll<HTMLElement>('[data-category]').forEach((card) => {
+			const show = filter === 'All' || card.dataset.category === filter;
+			card.style.display = show ? '' : 'none';
+		});
+	});
+</script>
