@@ -12,6 +12,7 @@ export const links = {
 	youtube20MinuteLeaders: 'https://www.youtube.com/watch?v=z-7wHEJY8P8',
 	facebook20MinuteLeaders:
 		'https://www.facebook.com/20minuteleaders/posts/ep742-yanir-calisar-ceo-co-founder-whatsllyfun-fact-yanir-can-play-any-song-on-h/465526061778159/',
+	productBuilderPodcast: 'https://open.spotify.com/episode/3tHVI84uaZni46nosJngzG',
 	nomadPodcast: 'https://nomadpodcast.com/ep-41-yanir-calisar/',
 	races: 'https://races.co.il/',
 	racesApp: 'https://apps.apple.com/il/app/%D7%A8%D7%99%D7%99%D7%A1-%D7%96/id6767002677',
