@@ -5,8 +5,7 @@ export type Project = {
 	group: ProjectGroup;
 	years: string;
 	text: string;
-	link?: string;
-	linkLabel?: string;
+	links?: { label: string; url: string }[];
 };
 
 /** Everything not already listed under "What I'm working on". */
@@ -16,16 +15,14 @@ export const projects: Project[] = [
 		group: 'Companies',
 		years: '2019–2024',
 		text: 'Founder and CEO. WhatsApp messaging, compliance and CRM integration for regulated enterprises. $11M seed; 150+ customers in 10 countries.',
-		link: 'https://tuvis.com/',
-		linkLabel: 'tuvis.com',
+		links: [{ label: 'tuvis.com', url: 'https://tuvis.com/' }, { label: 'Whatslly on Crunchbase', url: 'https://www.crunchbase.com/organization/whatslly' }, { label: 'Calcalist: the $11M seed', url: 'https://www.calcalistech.com/ctech/articles/0,7340,L-3923191,00.html' }],
 	},
 	{
 		name: 'Calisar Solutions',
 		group: 'Companies',
 		years: '2016–2019',
 		text: 'About 15 single-purpose SaaS tools for marketing and CRM teams. Wound down when Whatslly took over.',
-		link: 'https://github.com/yanirclsr/MarTech',
-		linkLabel: 'Code on GitHub',
+		links: [{ label: 'Code on GitHub', url: 'https://github.com/yanirclsr/MarTech' }],
 	},
 	{
 		name: 'Pabushka',
@@ -38,42 +35,42 @@ export const projects: Project[] = [
 		group: 'Jobs',
 		years: '2017–2018',
 		text: 'Full-stack developer. Product-experience software; acquired by Gainsight.',
+		links: [{ label: 'Crunchbase', url: 'https://www.crunchbase.com/organization/aptrinsic-inc' }],
 	},
 	{
 		name: 'Marketo',
 		group: 'Jobs',
 		years: '2013–2016',
 		text: 'Technical Product Lead for real-time personalization, the product Marketo bought with Insightera.',
+		links: [{ label: 'Marketo (now Adobe)', url: 'https://business.adobe.com/products/marketo.html' }],
 	},
 	{
 		name: 'Insightera',
 		group: 'Jobs',
 		years: '2009–2013',
 		text: 'First employee. Marketing personalization; acquired by Marketo in 2013.',
+		links: [{ label: 'Crunchbase', url: 'https://www.crunchbase.com/organization/insightera' }],
 	},
 	{
 		name: '4divers',
 		group: 'Apps',
 		years: '2026',
 		text: 'Dive log, certification import, and dive-site and buddy search for iPhone. Built from my own log as a PADI Divemaster.',
-		link: 'https://apps.apple.com/il/app/4divers/id6779240100',
-		linkLabel: 'App Store',
+		links: [{ label: 'App Store', url: 'https://apps.apple.com/il/app/4divers/id6779240100' }],
 	},
 	{
 		name: 'Races for iOS',
 		group: 'Apps',
 		years: '2026',
 		text: 'The Races.co.il calendar and results on iPhone.',
-		link: 'https://apps.apple.com/il/app/%D7%A8%D7%99%D7%99%D7%A1-%D7%96/id6767002677',
-		linkLabel: 'App Store',
+		links: [{ label: 'App Store', url: 'https://apps.apple.com/il/app/%D7%A8%D7%99%D7%99%D7%A1-%D7%96/id6767002677' }],
 	},
 	{
 		name: 'Manashir for iOS',
 		group: 'Apps',
 		years: '2026',
 		text: 'A session leader shares a code; everyone sees the same lyrics and chords, transposed with one tap.',
-		link: 'https://apps.apple.com/il/app/manashir-%D7%A9%D7%A8%D7%99%D7%9D-%D7%95%D7%9E%D7%A0%D7%92%D7%A0%D7%99%D7%9D-%D7%91%D7%99%D7%97%D7%93/id6759396128',
-		linkLabel: 'App Store',
+		links: [{ label: 'App Store', url: 'https://apps.apple.com/il/app/manashir-%D7%A9%D7%A8%D7%99%D7%9D-%D7%95%D7%9E%D7%A0%D7%92%D7%A0%D7%99%D7%9D-%D7%91%D7%99%D7%97%D7%93/id6759396128' }],
 	},
 	{
 		name: 'אהבה ברחבה',
@@ -86,8 +83,7 @@ export const projects: Project[] = [
 		group: 'Communities',
 		years: '2016–2019',
 		text: 'Tel Aviv meetups for senior marketers, usually in a bar, about what actually happened rather than case studies. About 2,000 members.',
-		link: 'https://www.meetup.com/CMO-Confessions-TLV/',
-		linkLabel: 'Meetup page',
+		links: [{ label: 'Meetup page', url: 'https://www.meetup.com/CMO-Confessions-TLV/' }],
 	},
 	{
 		name: 'Touchpoints',

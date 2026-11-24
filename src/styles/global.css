@@ -11,6 +11,8 @@
 	--buoy: #f4c01e;
 	--sea: #1f6f8b;
 	--land: #dde3e4;
+	--on-mark: #13233f;
+	color-scheme: light;
 
 	--display: 'Bricolage Grotesque', 'Arial Narrow', system-ui, sans-serif;
 	--text: 'Source Serif 4', Georgia, 'Times New Roman', serif;
@@ -26,6 +28,29 @@
 	--gutter: 9rem;
 	--wrap: 1040px;
 	font-size: 18px;
+}
+
+/* Night harbor: same roles, navy water instead of grey-black. */
+:root[data-theme='dark'] {
+	--chalk: #0f1a2c;
+	--ink: #e6ebef;
+	--slate: #9aa6b5;
+	--rule: #2b3a52;
+	--sea: #7cc4dc;
+	--land: #24344d;
+	color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		--chalk: #0f1a2c;
+		--ink: #e6ebef;
+		--slate: #9aa6b5;
+		--rule: #2b3a52;
+		--sea: #7cc4dc;
+		--land: #24344d;
+		color-scheme: dark;
+	}
 }
 
 * {
@@ -187,7 +212,7 @@ a:hover {
 .mark {
 	background: linear-gradient(transparent 14%, var(--buoy) 14%, var(--buoy) 86%, transparent 86%);
 	padding: 0 0.12em;
-	color: var(--ink);
+	color: var(--on-mark);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
@@ -278,7 +303,7 @@ a:hover {
 	border-style: solid;
 	border-width: 11px 0 11px 18px;
 	border-color: transparent transparent transparent var(--buoy);
-	filter: drop-shadow(0 0 2px rgba(19, 35, 63, 0.7));
+	filter: drop-shadow(0 0 2px rgba(19, 35, 63, 0.8));
 }
 
 .videos figcaption {
@@ -296,4 +321,22 @@ a:hover {
 
 .he {
 	unicode-bidi: isolate;
+}
+
+/* ---------- Theme toggle ---------- */
+
+.theme-toggle {
+	position: absolute;
+	top: 16px;
+	right: 20px;
+	font: 600 var(--s-1) var(--display);
+	color: var(--ink);
+	background: none;
+	border: 1px solid var(--rule);
+	padding: 6px 12px;
+	cursor: pointer;
+}
+
+.theme-toggle:hover {
+	border-color: var(--ink);
 }

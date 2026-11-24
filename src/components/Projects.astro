@@ -19,10 +19,12 @@ import { projects, projectGroups } from '../data/projects';
 								<div>
 									<h3 class="he">{p.name}</h3>
 									<p>{p.text}</p>
-									{p.link && (
-										<p class="meta">
-											<a href={p.link} target="_blank" rel="noopener">{p.linkLabel}</a>
-										</p>
+									{p.links && (
+										<ul class="links meta">
+											{p.links.map((l) => (
+												<li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>
+											))}
+										</ul>
 									)}
 								</div>
 							</li>
@@ -35,6 +37,11 @@ import { projects, projectGroups } from '../data/projects';
 </section>
 
 <style>
+	.links.meta {
+		font-family: var(--text);
+		font-weight: 400;
+		gap: 4px 20px;
+	}
 	.group {
 		font-family: var(--display);
 		font-weight: 700;
