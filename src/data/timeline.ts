@@ -42,7 +42,7 @@ export const timeline: TimelineItem[] = [
 	},
 	{
 		year: '2016',
-		title: 'Calisar Solutions',
+		title: 'Calisar Solutions (Overstack)',
 		text: 'I built about 15 small SaaS tools for marketing and CRM teams: attribution, analytics, data sync. Some had no interface at all. Several are open source. The same year I started The CMO Confessions, a Tel Aviv meetup for senior marketers that reached about 2,000 members.',
 	},
 	{

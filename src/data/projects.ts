@@ -18,11 +18,11 @@ export const projects: Project[] = [
 		links: [{ label: 'tuvis.com', url: 'https://tuvis.com/' }, { label: 'Whatslly on Crunchbase', url: 'https://www.crunchbase.com/organization/whatslly' }, { label: 'Calcalist: the $11M seed', url: 'https://www.calcalistech.com/ctech/articles/0,7340,L-3923191,00.html' }],
 	},
 	{
-		name: 'Calisar Solutions',
+		name: 'Calisar Solutions (Overstack)',
 		group: 'Companies',
 		years: '2016–2019',
 		text: 'About 15 single-purpose SaaS tools for marketing and CRM teams. Wound down when Whatslly took over.',
-		links: [{ label: 'Code on GitHub', url: 'https://github.com/yanirclsr/MarTech' }],
+		links: [{ label: 'Code on GitHub', url: 'https://github.com/yanirclsr/MarTech' }, { label: 'Overstack on Crunchbase', url: 'https://www.crunchbase.com/organization/overstack' }],
 	},
 	{
 		name: 'Pabushka',
