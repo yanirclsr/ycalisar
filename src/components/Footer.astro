@@ -2,20 +2,36 @@
 import { links } from '../data/links';
 ---
 
-<section id="contact" style="background: var(--bg-elevated); border-bottom: none;">
-	<div class="wrap reveal">
-		<p class="eyebrow">Get in touch</p>
-		<h2 class="section-title">Speaking, advising, or just say hi.</h2>
-		<p class="section-sub">
-			Open to lectures on entrepreneurship, product validation, founder-led sales, LATAM expansion, and the
-			real story behind Tuvis. Also happy to talk running, diving, or music.
-		</p>
-		<div class="link-row">
-			<a class="btn primary" href={links.linkedin} target="_blank" rel="noopener">LinkedIn →</a>
-			<a class="btn" href={links.github} target="_blank" rel="noopener">GitHub</a>
-			<a class="btn" href={links.appleDeveloper} target="_blank" rel="noopener">App Store</a>
-			<a class="btn" href={links.f6s} target="_blank" rel="noopener">F6S</a>
+<footer id="contact" class="block contact">
+	<div class="wrap">
+		<div class="block-head">
+			<h2>Get in touch</h2>
+			<p>
+				For a lecture, advice on an early-stage company, or a running or diving recommendation, message me on
+				LinkedIn.
+			</p>
 		</div>
-		<p class="hook" style="margin-top: 40px;">© {new Date().getFullYear()} Yanir Calisar</p>
+		<div class="indent">
+			<ul class="links">
+				<li><a href={links.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
+				<li><a href={links.appleDeveloper} target="_blank" rel="noopener">My apps on the App Store</a></li>
+				<li><a href={links.github} target="_blank" rel="noopener">GitHub</a></li>
+				<li><a href={links.slideshare} target="_blank" rel="noopener">Slides from past talks</a></li>
+			</ul>
+			<p class="copy">© {new Date().getFullYear()} Yanir Calisar</p>
+		</div>
 	</div>
-</section>
+</footer>
+
+<style>
+	.contact {
+		margin-top: 88px;
+		padding-bottom: 72px;
+		border-top: 2px solid var(--ink);
+	}
+	.copy {
+		margin-top: 40px;
+		color: var(--slate);
+		font-size: var(--s-1);
+	}
+</style>

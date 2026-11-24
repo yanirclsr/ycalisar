@@ -4,32 +4,27 @@ import { visitedCountries } from '../data/countries';
 import WorldMap from './WorldMap.astro';
 ---
 
-<section id="travel">
+<section id="travel" class="block">
 	<div class="wrap">
-		<p class="eyebrow reveal">Travel & diving</p>
-		<h2 class="section-title reveal">{visitedCountries.length} countries, and a PADI Divemaster ticket.</h2>
-		<p class="section-sub reveal">
-			Born in Mexico, raised in Israel, built a business in Brazil. Travel was never separate from work —
-			and diving in Thailand eventually turned into an app.
-		</p>
-		<div class="card reveal" style="margin-bottom: 16px;">
-			<WorldMap />
-			<p class="hook" style="margin-top: 12px;">{visitedCountries.join(' · ')}</p>
+		<div class="block-head">
+			<h2>{visitedCountries.length} countries, one dive log</h2>
+			<p>
+				Born in Mexico, raised in Israel, built a business in Brazil. I became a PADI Divemaster in
+				2020; my dive log turned into the <a href={links.fourDiversApp} target="_blank" rel="noopener">4divers</a> app.
+			</p>
 		</div>
-		<div class="grid cols-3">
-			<div class="card reveal">
-				<p class="hook" style="margin: 0; color: var(--text);">{visitedCountries.length} countries visited</p>
-			</div>
-			<div class="card reveal">
-				<p class="hook" style="margin: 0; color: var(--text);">PADI Divemaster, certified 2020</p>
-			</div>
-			<details class="card reveal">
-				<summary>4divers — built from the dive log</summary>
-				<div class="detail-body">
-					<p>A digital logbook and dive-buddy network, built from my own diving history as a Divemaster.</p>
-					<p style="margin-top: 10px;"><a href={links.fourDiversApp} target="_blank" rel="noopener">Get it on the App Store →</a></p>
-				</div>
-			</details>
+		<div class="indent">
+			<WorldMap />
+			<p class="countries">{visitedCountries.join(', ')}.</p>
 		</div>
 	</div>
 </section>
+
+<style>
+	.countries {
+		margin-top: 16px;
+		color: var(--slate);
+		font-size: var(--s-1);
+		max-width: var(--measure);
+	}
+</style>

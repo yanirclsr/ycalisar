@@ -1,28 +1,37 @@
 ---
 import { timeline } from '../data/timeline';
+import { links } from '../data/links';
 ---
 
-<section id="story">
+<section id="story" class="block">
 	<div class="wrap">
-		<p class="eyebrow reveal">My story</p>
-		<h2 class="section-title reveal">Mexico City to Tel Aviv, with a lot of detours.</h2>
-		<p class="section-sub reveal">
-			Not a straight line. Sales, hospitality, marketing, product, code, and back again — usually because a
-			real problem needed solving. Tap any chapter for the fuller story.
-		</p>
-		<div style="display: flex; flex-direction: column; gap: 12px;">
-			{timeline.map((item) => (
-				<details class="card reveal">
-					<summary>
-						<span>
-							<span class="pill accent" style="margin-right: 10px;">{item.year}</span>
-							{item.title}
-						</span>
-					</summary>
-					<p class="hook" style="margin-top: 10px;">{item.hook}</p>
-					<div class="detail-body">{item.detail}</div>
-				</details>
+		<div class="block-head">
+			<h2>The long version</h2>
+			<p>Sales, a pub, enterprise software, code, and back to founding.</p>
+		</div>
+		<ol class="ledger">
+			{timeline.map((item, i) => (
+				<li>
+					<span class="when">{i === timeline.length - 1 ? <span class="mark">{item.year}</span> : item.year}</span>
+					<div>
+						<h3>{item.title}</h3>
+						<p>{item.text}</p>
+					</div>
+				</li>
 			))}
+		</ol>
+		<div class="indent more">
+			<ul class="links">
+				<li><a href={links.tuvis} target="_blank" rel="noopener">tuvis.com</a></li>
+				<li><a href={links.tuvisJourneyPost} target="_blank" rel="noopener">How Tuvis started (LinkedIn)</a></li>
+				<li><a href={links.tuvisSpanishArticle} target="_blank" rel="noopener">Emprendedores News article (Spanish)</a></li>
+			</ul>
 		</div>
 	</div>
 </section>
+
+<style>
+	.more {
+		margin-top: 20px;
+	}
+</style>

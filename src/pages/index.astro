@@ -3,17 +3,15 @@ import '../styles/global.css';
 import Hero from '../components/Hero.astro';
 import Now from '../components/Now.astro';
 import Timeline from '../components/Timeline.astro';
-import Tuvis from '../components/Tuvis.astro';
 import Projects from '../components/Projects.astro';
 import Sport from '../components/Sport.astro';
-import MusicCommunity from '../components/MusicCommunity.astro';
 import Media from '../components/Media.astro';
 import Travel from '../components/Travel.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'Yanir Calisar — Founder, Builder, Athlete';
+const title = 'Yanir Calisar';
 const description =
-	"Founder of Tuvis. Nearly two decades between business, product, marketing, sales, and code — plus marathons, diving, music, and community.";
+	"Founder of Tuvis (WhatsApp compliance for enterprises, $11M seed). Now building Races.co.il, Manashir and Ormilio, lecturing at Reichman University, and running marathons.";
 ---
 
 <html lang="en">
@@ -30,33 +28,26 @@ const description =
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://ycalisar.com" />
 		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="theme-color" content="#f3f5f2" />
 		<link rel="preconnect" href="https://i.ytimg.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+		/>
 	</head>
 	<body>
 		<Hero />
+		<main>
 		<Now />
 		<Timeline />
-		<Tuvis />
 		<Projects />
 		<Sport />
-		<MusicCommunity />
 		<Media />
 		<Travel />
+		</main>
 		<Footer />
 	</body>
 </html>
 
-<script>
-	const observer = new IntersectionObserver(
-		(entries) => {
-			for (const entry of entries) {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('is-visible');
-					observer.unobserve(entry.target);
-				}
-			}
-		},
-		{ threshold: 0.1 }
-	);
-	document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-</script>

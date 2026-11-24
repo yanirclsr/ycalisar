@@ -1,52 +1,59 @@
 ---
-import { races, marathonProgression, racesProfileUrl } from '../data/races';
+import { races, racesProfileUrl } from '../data/races';
 ---
 
-<section id="sport" style="background: var(--bg-elevated);">
+<section id="sport" class="block">
 	<div class="wrap">
-		<p class="eyebrow reveal">Endurance</p>
-		<h2 class="section-title reveal">Marathons, triathlon, and a slow climb to sub-3:30.</h2>
-		<p class="section-sub reveal">
-			Same habits that build companies build fitness: consistency, measurement, and adjusting the plan after
-			setbacks.
-		</p>
-
-		<div class="card reveal" style="margin-bottom: 32px;">
-			<h3 style="font-size: 1rem; color: var(--text-dim); margin-bottom: 16px;">Marathon progression</h3>
-			<div style="display: flex; gap: 24px; flex-wrap: wrap;">
-				{marathonProgression.map((m) => (
-					<div>
-						<div style="font-size: 1.8rem; font-weight: 800; color: var(--accent);">{m.result}</div>
-						<div class="hook">{m.label}</div>
-					</div>
-				))}
-			</div>
+		<div class="block-head">
+			<h2>Running</h2>
+			<p>
+				First marathon: Tel Aviv, February 2025. Seven months later, 3:57:59 in Berlin in 27°C heat. A year after
+				the first, 3:23:31 back in Tel Aviv.
+			</p>
 		</div>
-
-		<h3 class="reveal" style="font-size: 1rem; color: var(--text-dim); margin-bottom: 12px;">Personal bests</h3>
-		<div style="display: flex; flex-direction: column; gap: 10px;">
-			{races.map((r) => (
-				<details class="card reveal">
-					<summary>
-						<span>
-							<span class="pill" style="margin-right: 10px;">{r.date}</span>
-							{r.name}
-						</span>
-						<span class="pill accent">{r.distance.split(' (')[0]} · {r.result}</span>
-					</summary>
-					<div class="detail-body">
-						<p>{r.distance}</p>
-						{r.note && <p style="margin-top: 6px;">{r.note}</p>}
-					</div>
-				</details>
-			))}
-		</div>
-		<p class="reveal" style="margin-top: 16px;"><a class="btn" href={racesProfileUrl} target="_blank" rel="noopener">All results on races.co.il →</a></p>
-
-		<div class="card reveal" style="margin-top: 24px;">
-			<p class="hook" style="margin: 0;">
-				A side project: running at least 10K in 40 different cities.
+		<div class="indent">
+			<table class="results">
+				<caption class="visually-hidden">Personal bests</caption>
+				<thead>
+					<tr>
+						<th scope="col">Distance</th>
+						<th scope="col">Time</th>
+						<th scope="col">Race</th>
+						<th scope="col" class="hide-sm">Pace</th>
+					</tr>
+				</thead>
+				<tbody>
+					{races.map((r, i) => (
+						<tr>
+							<th scope="row">{r.distance}</th>
+							<td class="time">{i === 0 ? <span class="mark">{r.result}</span> : r.result}</td>
+							<td>{r.name}<span class="sub">{r.date}</span></td>
+							<td class="hide-sm">{r.pace ?? ''}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+			<p class="note">
+				Every result: <a href={racesProfileUrl} target="_blank" rel="noopener">races.co.il/u/yanir</a>
 			</p>
 		</div>
 	</div>
 </section>
+
+<style>
+	.results tbody th {
+		font-weight: 400;
+	}
+	.note {
+		margin-top: 16px;
+		color: var(--slate);
+	}
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+</style>
