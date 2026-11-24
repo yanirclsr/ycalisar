@@ -7,7 +7,7 @@ export type TimelineItem = {
 
 export const timeline: TimelineItem[] = [
 	{
-		year: '[ADD BIRTH YEAR]',
+		year: '1986',
 		title: 'Born in Mexico City, raised in Israel',
 		hook: 'The family moved back to Israel when he was about six months old.',
 		detail:
@@ -32,7 +32,7 @@ export const timeline: TimelineItem[] = [
 		title: 'A bartending course and a robot',
 		hook: 'He built a robot that could pour drinks along a bar.',
 		detail:
-			'Before technology entrepreneurship, Yanir worked in face-to-face sales and hospitality, including a stint as an early operator behind a pub called Pabushka [ADD YEARS, ADD LOCATION]. The bar-pouring robot is an early, honest example of his pattern: combine a physical experience with technology, and build rather than just talk about it.',
+			'Before technology entrepreneurship, Yanir worked in face-to-face sales and hospitality, including a stint as an early operator behind a pub called Pabushka (2010–2013, in Kfar Aza). The bar-pouring robot is an early, honest example of his pattern: combine a physical experience with technology, and build rather than just talk about it.',
 	},
 	{
 		year: '2009',
@@ -46,7 +46,7 @@ export const timeline: TimelineItem[] = [
 		title: 'Sapir College, and three years near Gaza',
 		hook: 'B.A. in Technological Marketing, Magna Cum Laude — while living in Kfar Aza.',
 		detail:
-			'Yanir studied Technological Marketing at Sapir College, graduating Magna Cum Laude [VERIFY EXACT DEGREE TITLE]. During this period he lived for about three years in Kfar Aza, near the Gaza border — a place that would become personally significant years later.',
+			'Yanir earned a B.A. in Technological Marketing at Sapir College, graduating Magna Cum Laude. During this period he lived for about three years in Kfar Aza, near the Gaza border — a place that would become personally significant years later.',
 	},
 	{
 		year: '2013',
@@ -60,7 +60,7 @@ export const timeline: TimelineItem[] = [
 		title: 'Marketo, and eventually a developer role at Aptrinsic',
 		hook: 'Enterprise scale, then back to writing code.',
 		detail:
-			'At Marketo, Yanir worked on real-time personalization, product, and enterprise customer implementation [VERIFY EXACT TITLES]. He later worked as a full-stack developer at Aptrinsic (acquired by Gainsight) [ADD EXACT DATES] — a reminder that he was never only managing, he was also building.',
+			'At Marketo, Yanir worked on real-time personalization, product, and enterprise customer implementation as a Technical Product Lead. He later worked as a full-stack developer at Aptrinsic (acquired by Gainsight) in 2017–2018 — a reminder that he was never only managing, he was also building.',
 	},
 	{
 		year: '2016',
@@ -74,7 +74,7 @@ export const timeline: TimelineItem[] = [
 		title: 'MBA at Reichman University (IDC Herzliya)',
 		hook: 'Big data, predictive AI, and a marketing lens on strategy.',
 		detail:
-			'Yanir pursued an MBA focused on big data and predictive AI with a marketing emphasis [VERIFY EXACT PROGRAM NAME], deepening the analytical and strategic side of work he was already doing in the field. Years later he returned to Reichman as a guest lecturer and startup judge.',
+			'Yanir earned an MBA specializing in Big Data & AI and Marketing, deepening the analytical and strategic side of work he was already doing in the field. Years later he returned to Reichman as a guest lecturer and startup judge.',
 	},
 	{
 		year: '2019',
@@ -116,6 +116,6 @@ export const timeline: TimelineItem[] = [
 		title: 'Advising, lecturing, and building again',
 		hook: 'New products in sport, music, AI, and diving — plus marathons in between.',
 		detail:
-			'Since then: advising founders, guest lecturing on entrepreneurship at Reichman University, and building new things — Races.co.il, Manashir, 4divers, and exploring EyeronAI — while training for marathons and triathlons.',
+			'Since then: advising founders, guest lecturing on entrepreneurship at Reichman University, and building new things — Races.co.il, Manashir, 4divers — while training for marathons and triathlons.',
 	},
 ];

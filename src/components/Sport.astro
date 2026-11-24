@@ -1,5 +1,5 @@
 ---
-import { races, marathonProgression } from '../data/races';
+import { races, marathonProgression, racesProfileUrl } from '../data/races';
 ---
 
 <section id="sport" style="background: var(--bg-elevated);">
@@ -23,6 +23,7 @@ import { races, marathonProgression } from '../data/races';
 			</div>
 		</div>
 
+		<h3 class="reveal" style="font-size: 1rem; color: var(--text-dim); margin-bottom: 12px;">Personal bests</h3>
 		<div style="display: flex; flex-direction: column; gap: 10px;">
 			{races.map((r) => (
 				<details class="card reveal">
@@ -31,7 +32,7 @@ import { races, marathonProgression } from '../data/races';
 							<span class="pill" style="margin-right: 10px;">{r.date}</span>
 							{r.name}
 						</span>
-						<span class="pill accent">{r.result}</span>
+						<span class="pill accent">{r.distance.split(' (')[0]} · {r.result}</span>
 					</summary>
 					<div class="detail-body">
 						<p>{r.distance}</p>
@@ -40,10 +41,11 @@ import { races, marathonProgression } from '../data/races';
 				</details>
 			))}
 		</div>
+		<p class="reveal" style="margin-top: 16px;"><a class="btn" href={racesProfileUrl} target="_blank" rel="noopener">All results on races.co.il →</a></p>
 
 		<div class="card reveal" style="margin-top: 24px;">
 			<p class="hook" style="margin: 0;">
-				A side project: running at least 10K in 40 different cities. <span class="ph">[city list and map coming soon]</span>
+				A side project: running at least 10K in 40 different cities.
 			</p>
 		</div>
 	</div>

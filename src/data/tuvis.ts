@@ -48,7 +48,7 @@ export const tuvisChapters: TuvisChapter[] = [
 	{
 		n: 9,
 		title: 'Enterprise scale',
-		text: 'Tuvis grew to serve enterprise customers across multiple countries, including several of Brazil\'s largest banks [VERIFY EXACT METRICS BEFORE PUBLISHING], with a team that scaled well beyond the founding pair.',
+		text: 'Tuvis grew to serve 150+ enterprise customers in 10 countries, including 9 of the 10 largest banks in Brazil, with a team that scaled well beyond the founding pair.',
 	},
 	{
 		n: 10,

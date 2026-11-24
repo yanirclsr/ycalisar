@@ -6,82 +6,25 @@ export type Race = {
 	note?: string;
 };
 
+/** Personal bests, from https://races.co.il/u/yanir (plus the Eilat Olympic triathlon). */
+export const racesProfileUrl = 'https://races.co.il/u/yanir';
+
 export const races: Race[] = [
-	{
-		date: 'Dec 2024',
-		name: 'Eilat Olympic Triathlon',
-		distance: 'Olympic distance',
-		result: '3:20:00',
-	},
-	{
-		date: 'Jan 3, 2025',
-		name: 'Tiberias Half Marathon',
-		distance: '21.1K',
-		result: '[ADD OFFICIAL RESULT]',
-	},
-	{
-		date: 'Feb 14, 2025',
-		name: 'Or Yehuda 10K',
-		distance: '10K',
-		result: '~48:00 [VERIFY]',
-	},
-	{
-		date: 'Feb 28, 2025',
-		name: 'Tel Aviv Marathon — first marathon',
-		distance: '42.2K',
-		result: '[ADD OFFICIAL RESULT]',
-		note: 'Run in support of Make-A-Wish Israel.',
-	},
-	{
-		date: 'Apr 5, 2025',
-		name: 'Prague Half Marathon',
-		distance: '21.1K',
-		result: '[ADD OFFICIAL RESULT]',
-		note: 'Connected to Make-A-Wish UK.',
-	},
-	{
-		date: 'Sep 21, 2025',
-		name: 'Berlin Marathon',
-		distance: '42.2K',
-		result: '3:57:59',
-		note: 'First sub-4-hour marathon, run in ~27°C heat.',
-	},
-	{
-		date: 'Nov 23, 2025',
-		name: 'Thessaloniki 10K',
-		distance: '10K',
-		result: '[ADD OFFICIAL RESULT]',
-	},
-	{
-		date: 'Feb 6, 2026',
-		name: 'Dead Sea Half Marathon',
-		distance: '21.1K',
-		result: '[ADD OFFICIAL RESULT]',
-		note: 'Target was ~1:45.',
-	},
+	{ date: 'Jun 4, 2026', name: 'Petah Tikva Night Race', distance: '5K', result: '20:40', note: 'Personal best — 4:08/km.' },
+	{ date: 'May 8, 2026', name: 'Givat Shmuel Race', distance: '10K', result: '42:29', note: 'Personal best — 4:15/km.' },
+	{ date: 'Feb 6, 2026', name: 'Dead Sea Half Marathon', distance: 'Half marathon (21.1K)', result: '1:38:09', note: 'Personal best — 4:39/km.' },
 	{
 		date: 'Feb 27, 2026',
-		name: 'Tel Aviv Marathon — one year later',
-		distance: '42.2K',
-		result: '3:23:54',
-		note: 'Down from a first marathon in 2025 to sub-4 in Berlin to 3:24 — a year of real progress.',
+		name: 'Tel Aviv Marathon',
+		distance: 'Marathon (42.2K)',
+		result: '3:23:31',
+		note: 'Personal best — 4:49/km. One year after a first marathon in Tel Aviv, and down from 3:57:59 in Berlin.',
 	},
-	{
-		date: 'Apr 17, 2026',
-		name: 'Kinneret 70.3',
-		distance: 'Half Ironman distance',
-		result: '[CONFIRM EVENT STATUS AND RESULT]',
-	},
-	{
-		date: 'Jun 6, 2026',
-		name: 'Petah Tikva Night Race',
-		distance: '5K',
-		result: '[ADD OFFICIAL RESULT]',
-	},
+	{ date: 'Dec 2024', name: 'Eilat Olympic Triathlon', distance: 'Olympic distance triathlon', result: '3:20:00' },
 ];
 
 export const marathonProgression = [
-	{ label: 'Tel Aviv 2025 (first marathon)', result: '[ADD RESULT]' },
+	{ label: 'Tel Aviv 2025', result: 'First finish' },
 	{ label: 'Berlin 2025', result: '3:57:59' },
-	{ label: 'Tel Aviv 2026', result: '3:23:54' },
+	{ label: 'Tel Aviv 2026', result: '3:23:31' },
 ];

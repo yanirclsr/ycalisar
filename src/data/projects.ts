@@ -28,7 +28,7 @@ export const projects: Project[] = [
 		category: 'Companies',
 		years: '2013–2016',
 		status: 'Acquired the Insightera product',
-		role: 'Technical Product Lead [VERIFY TITLE]',
+		role: 'Technical Product Lead',
 		oneLiner: 'Enterprise marketing automation at global scale.',
 		detail:
 			'Continued the Insightera product line inside Marketo, working on personalization, integrations, and enterprise implementation.',
@@ -36,11 +36,11 @@ export const projects: Project[] = [
 	{
 		name: 'Aptrinsic',
 		category: 'Companies',
-		years: '[ADD DATES]',
+		years: '2017–2018',
 		status: 'Acquired by Gainsight',
 		role: 'Full Stack Developer',
 		oneLiner: 'A product experience company — hands back on the keyboard.',
-		detail: 'Worked as a developer, later acquired by Gainsight. [ADD WHAT WAS BUILT]',
+		detail: 'Worked as a developer, later acquired by Gainsight.',
 	},
 	{
 		name: 'Calisar Solutions',
@@ -66,11 +66,11 @@ export const projects: Project[] = [
 	{
 		name: 'Pabushka',
 		category: 'Experiments',
-		years: '[ADD YEARS]',
+		years: '2010–2013',
 		status: 'No longer active',
-		role: '[ADD ROLE]',
+		role: 'Founder',
 		oneLiner: 'An early pub venture — real customers, cash flow, and operations.',
-		detail: '[ADD LOCATION] [ADD STORY OF HOW IT STARTED] [ADD WHY IT ENDED]',
+		detail: 'A pub in Kfar Aza, run while studying at Sapir College.',
 	},
 	{
 		name: 'The bar-pouring robot',
@@ -84,7 +84,7 @@ export const projects: Project[] = [
 	{
 		name: 'The CMO Confessions',
 		category: 'Community',
-		years: '2016–2019 [VERIFY]',
+		years: '2016–2019',
 		status: '~2,000 members',
 		role: 'Founder',
 		oneLiner: 'A Tel Aviv community for senior marketing leaders.',
@@ -109,15 +109,6 @@ export const projects: Project[] = [
 		oneLiner: 'Enterprise messaging, compliance, and CRM platform. $11M raised.',
 		detail: 'Grew from a WhatsApp-CRM bridge into a full enterprise compliance and security platform serving major Latin American enterprises.',
 		link: 'https://tuvis.com/',
-	},
-	{
-		name: 'EyeronAI',
-		category: 'Experiments',
-		years: '2024–2026 [CONFIRM STATUS]',
-		status: '[CONFIRM WHETHER ACTIVE]',
-		role: 'Founder',
-		oneLiner: 'Enterprise governance for employee generative-AI usage.',
-		detail: 'Concept for centralized, secure access and control over generative AI tools inside a company. [ADD CURRENT STATUS]',
 	},
 	{
 		name: 'Races.co.il',
@@ -171,20 +162,20 @@ export const projects: Project[] = [
 	{
 		name: '40 Cities',
 		category: 'Experiments',
-		years: 'Ongoing [VERIFY PROJECT NAME]',
+		years: 'Ongoing',
 		status: 'In progress',
 		role: 'Runner',
 		oneLiner: 'A personal project: run at least 10K in 40 different cities.',
-		detail: 'Started around age 38 — travel, running, and reflection combined. [ADD CITY LIST] [ADD MAP]',
+		detail: 'Started around age 38 — travel, running, and reflection combined.',
 	},
 	{
 		name: 'אהבה ברחבה',
 		category: 'Community',
 		years: 'July 28, 2026',
-		status: 'Upcoming',
+		status: 'Took place July 28, 2026',
 		role: 'Organizer',
 		oneLiner: 'A free community music event in Tel Aviv, built around Tu B\'Av and songs about love.',
-		detail: 'A community event first — musicians are welcome, but the point is bringing people together, not performing. [ADD REGISTRATION LINK]',
+		detail: 'A community event first — musicians are welcome, but the point is bringing people together, not performing.',
 	},
 ];
 
