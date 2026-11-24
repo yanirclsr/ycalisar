@@ -1,0 +1,24 @@
+---
+import { nowItems } from '../data/now';
+---
+
+<section id="now">
+	<div class="wrap">
+		<p class="eyebrow reveal">Now</p>
+		<h2 class="section-title reveal">What I'm building these days.</h2>
+		<p class="section-sub reveal">Products, a podcast, and communities — mostly around running, music, and bringing people together.</p>
+		<div class="grid cols-2">
+			{nowItems.map((item) => (
+				<article class="card reveal">
+					<h3 style="font-size: 1.05rem; font-weight: 700;">{item.name.split(' · ').map((part, i) => (<>{i > 0 && ' · '}<bdi>{part}</bdi></>))}</h3>
+					<p class="hook" style="margin-top: 6px;">{item.what}</p>
+					{item.link && (
+						<p style="margin-top: 12px;">
+							<a class="btn" href={item.link} target="_blank" rel="noopener">{item.linkLabel} →</a>
+						</p>
+					)}
+				</article>
+			))}
+		</div>
+	</div>
+</section>

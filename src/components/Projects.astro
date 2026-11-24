@@ -21,7 +21,7 @@ import { projects, projectCategories } from '../data/projects';
 				<details class="card reveal" data-category={p.category}>
 					<summary>
 						<span>
-							{p.name}
+							{p.name.split(' · ').map((part, i) => (<>{i > 0 && ' · '}<bdi>{part}</bdi></>))}
 							<div style="margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap;">
 								<span class="pill">{p.category}</span>
 								<span class="pill accent">{p.status}</span>
