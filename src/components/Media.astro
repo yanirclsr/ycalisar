@@ -41,6 +41,21 @@ const podcasts = [
 		link: links.reichmanEntrepreneurshipPost,
 		linkLabel: 'Course post',
 	},
+	{
+		when: 'Podcast',
+		title: 'Podcast on Spotify',
+		text: 'Full show on Spotify.',
+		link: links.spotifyShow,
+		linkLabel: 'Spotify',
+	},
+];
+
+const press = [
+	{ title: 'Geektime', text: 'The founders never met until this photo: Whatslly raises $11M.', link: links.geektimeSeed },
+	{ title: 'CTech by Calcalist', text: 'Coverage on CTech, Calcalist\'s English-language tech site.', link: links.ctechArticle },
+	{ title: 'Calcalist', text: 'Coverage in Calcalist. In Hebrew.', link: links.calcalistArticle },
+	{ title: 'Start-Up Nation Central', text: 'Tuvis company profile.', link: links.startupNationTuvis },
+	{ title: 'Crunchbase', text: 'My founder profile.', link: links.crunchbase },
 ];
 ---
 
@@ -80,6 +95,18 @@ const podcasts = [
 						<h3>{p.title}</h3>
 						<p>{p.text}</p>
 						<p class="meta"><a href={p.link} target="_blank" rel="noopener">{p.linkLabel}</a></p>
+					</div>
+				</li>
+			))}
+		</ul>
+		<ul class="ledger list">
+			{press.map((p) => (
+				<li>
+					<span class="when">Press</span>
+					<div>
+						<h3>{p.title}</h3>
+						<p>{p.text}</p>
+						<p class="meta"><a href={p.link} target="_blank" rel="noopener">Read</a></p>
 					</div>
 				</li>
 			))}
