@@ -27,4 +27,10 @@ export const links = {
 	reichmanInstagram: 'https://www.instagram.com/p/DTLCmjiiBnW/?img_index=2',
 	aiPitchingFrameworkPost:
 		'https://www.linkedin.com/posts/yanirc_%D7%A4%D7%99%D7%A6%D7%99%D7%A0%D7%92-%D7%9C%D7%9E%D7%A9%D7%A7%D7%99%D7%A2%D7%99%D7%9D-%D7%91-2026-%D7%A9%D7%9C%D7%95%D7%A9-%D7%94%D7%A9%D7%90%D7%9C%D7%95%D7%AA-%D7%A9%D7%9B%D7%9C-activity-7473331776631767040-8fX-',
+	crunchbase: 'https://www.crunchbase.com/person/yanir-calisar',
+	startupNationTuvis: 'https://finder.startupnationcentral.org/company_page/tuvis',
+	spotifyShow: 'https://open.spotify.com/show/0QSZy55tvb0ujclgqhiOJt',
+	ctechArticle: 'https://www.calcalistech.com/ctechnews/article/by11sc0kfc',
+	calcalistArticle: 'https://www.calcalist.co.il/calcalistech/article/hkvstn9ec',
+	geektimeSeed: 'https://www.geektime.co.il/founders-never-met-until-this-photo-whatslly-raises-11-m/',
 };
